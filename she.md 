@@ -1,0 +1,65 @@
+1 - [] Création des entités 
+    - [x] Client
+        - nom
+        - contact 
+        - adresse 
+    - [] Region 
+        - libelle  
+    - [] District 
+        - libelle
+        - region  
+    - [] Commune  
+        - libelle
+        - district 
+    - [] Demande 
+        - client 
+        - commune 
+        - lieu 
+    - [] Statut
+        - libelle 
+    - [] DemandeStatut 
+        - demande 
+        - statut 
+        - date 
+        - user 
+        - observation 
+
+2 - [] Création des modèles 
+    - [] Client
+        - nom
+        - contact 
+        - adresse 
+    - [] Region 
+        - libelle  
+    - [] District 
+        - libelle
+        - region  
+    - [] Commune  
+        - libelle
+        - district 
+    - [] Demande 
+        - client 
+        - commune 
+        - lieu 
+    - [] Statut
+        - libelle 
+    - [] DemandeStatut 
+        - demande 
+        - statut 
+        - date 
+        - user 
+        - observation 
+
+3 - [] Repository 
+    - [] Custom 
+        Demande 
+            |
+            |
+            v
+        DemandeStatut
+
+4 - [] Service 
+    - [] Call fonction custom 
+
+5 - [] Données de test 
+    - [] Mi_test données
