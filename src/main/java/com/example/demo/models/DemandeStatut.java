@@ -12,11 +12,11 @@ public class DemandeStatut {
     private int id;
 
     @ManyToOne
-    @Column(name = "id_demande")
+    @JoinColumn(name = "id_demande")
     private Demande Demande;
 
     @ManyToOne
-    @Column(name = "id_statut")
+    @JoinColumn(name = "id_statut")
     private Statut Statut;
 
     @Column(name = "date")
