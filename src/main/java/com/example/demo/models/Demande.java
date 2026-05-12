@@ -10,13 +10,13 @@ public class Demande {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_client")
-    private int idClient;
+    private Client Client;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_commune")
-    private int idCommune;
+    private Commune Commune;
 
     @Column(name = "lieu")
     private String lieu;
@@ -31,20 +31,20 @@ public class Demande {
         this.id = id;
     }
 
-    public int getIdClient() {
-        return idClient;
+    public Client getClient() {
+        return Client;
     }
 
-    public void setIdClient(int idClient) {
-        this.idClient = idClient;
+    public void setClient(Client client) {
+        this.Client = client;
     }
 
-    public int getIdCommune() {
-        return idCommune;
+    public Commune getCommune() {
+        return Commune;
     }
 
-    public void setIdCommune(int idCommune) {
-        this.idCommune = idCommune;
+    public void setCommune(Commune commune) {
+        this.Commune = commune;
     }
 
     public String getLieu() {

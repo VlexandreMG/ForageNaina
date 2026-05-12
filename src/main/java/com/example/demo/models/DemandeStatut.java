@@ -11,14 +11,48 @@ public class DemandeStatut {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @OneToMany
+    @ManyToOne
     @Column(name = "id_demande")
-    private int idDemande;
+    private Demande Demande;
 
-    @OneToMany
+    @ManyToOne
     @Column(name = "id_statut")
-    private int idStatut;
+    private Statut Statut;
 
     @Column(name = "date")
     private Date date;
+
+    public DemandeStatut() {};
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Demande getDemande() {
+        return Demande;
+    }
+
+    public void setDemande(Demande demande) {
+        Demande = demande;
+    }
+
+    public Statut getStatut() {
+        return Statut;
+    }
+
+    public void setStatut(Statut statut) {
+        Statut = statut;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 }

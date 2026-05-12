@@ -13,9 +13,9 @@ public class District {
     @Column(name= "libelle")
     private String libelle;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name= "id_region")
-    private int idRegion;
+    private Region Region;
 
     public District() {}
 
@@ -35,11 +35,11 @@ public class District {
         this.libelle = libelle;
     }
 
-    public int getIdRegion() {
-        return idRegion;
+    public Region getRegion() {
+        return Region;
     }
 
-    public void setIdRegion(int idRegion) {
-        this.idRegion = idRegion;
-    }    
+    public void setRegion(Region Region) {
+        this.Region = Region;
+    }
 }

@@ -13,9 +13,9 @@ public class Commune {
     @Column(name = "libelle")
     private String libelle;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "id_district")
-    private int idDistrict;
+    private District District;
 
     public Commune() {}
 
@@ -35,13 +35,13 @@ public class Commune {
         this.libelle = libelle;
     }
 
-    public int getIdDistrict() {
-        return idDistrict;
+    public District getDistrict() {
+        return District;
     }
 
-    public void setIdDistrict(int idDistrict) {
-        this.idDistrict = idDistrict;
+    public void setDistrict(District District) {
+        this.District = District;
     }
-
+    
     
 }
