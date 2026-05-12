@@ -1,0 +1,5 @@
+<form th:action="@{/save}" th:object="${demande}" method="post">
+    <input type="text" th:field="*{Client}"/>
+    <input type="text" th:field="*{Commune}"/>
+    <input type="text" th:field="*{lieu}"/>
+</form>
