@@ -3,19 +3,19 @@
         - nom
         - contact 
         - adresse 
-    - [] Region 
+    - [x] Region 
         - libelle  
-    - [] District 
+    - [x] District 
         - libelle
         - region  
-    - [] Commune  
+    - [x] Commune  
         - libelle
         - district 
-    - [] Demande 
+    - [x] Demande 
         - client 
         - commune 
         - lieu 
-    - [] Statut
+    - [x] Statut
         - libelle 
     - [] DemandeStatut 
         - demande 
