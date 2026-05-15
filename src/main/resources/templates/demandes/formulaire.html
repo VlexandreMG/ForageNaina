@@ -1,5 +1,7 @@
 <form th:action="@{/demandes/save}" th:object="${demande}" method="post">
-    <input type="text" th:field="*{client}"/>
-    <input type="text" th:field="*{commune}"/>
-    <input type="text" th:field="*{lieu}"/>
+    <input type="number" th:field="*{client.id}" placeholder="Client"/>
+    <input type="number" th:field="*{commune.id}" placeholder="Commune"/>
+    <input type="text" th:field="*{lieu}" placeholder="Lieu"/>
+
+    <button type="submit">Enregistrer</button>
 </form>
