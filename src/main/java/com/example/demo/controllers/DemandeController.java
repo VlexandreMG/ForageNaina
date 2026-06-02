@@ -41,6 +41,11 @@ public class DemandeController {
     }
 
     @PostMapping("/getById")
+    public String afficherDemande(Model model ,Long id) {
+        Demande demande = demandeService.getDemandeById(id);
+        model.addAttribute("demande",demande);
+        return "demandes/test";
+    }
 
     @GetMapping("/test")
     public String afficherPageTest() {
