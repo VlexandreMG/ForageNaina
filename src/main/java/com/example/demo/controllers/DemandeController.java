@@ -23,6 +23,11 @@ public class DemandeController {
         return "demandes/formulaire";
     }
 
+    @GetMapping("/all")
+    public String getAll() {
+        
+    }
+
     @PostMapping("/save")
     public String enregistrerDemande(@ModelAttribute("demande") Demande demande) {
         demandeService.saveNewDemande(demande);
