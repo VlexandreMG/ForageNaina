@@ -28,4 +28,9 @@ public class DemandeController {
         demandeService.saveNewDemande(demande);
         return "redirect:/demandes/new";
     }
+
+    @GetMapping("/demandes/test")
+    public String afficherPageTest() {
+        return "demandes/test";
+    }
 }
