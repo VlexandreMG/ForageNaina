@@ -1,3 +1,5 @@
+<h2>Formulaire d'ajout de demande : </h2>
+
 <form th:action="@{/demandes/save}" th:object="${demande}" method="post">
     <input type="number" th:field="*{client.id}" placeholder="Client"/>
     <input type="number" th:field="*{commune.id}" placeholder="Commune"/>
