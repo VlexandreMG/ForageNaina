@@ -29,7 +29,7 @@ public class DemandeController {
         return "redirect:/demandes/new";
     }
 
-    @GetMapping("/demandes/test")
+    @GetMapping("/test")
     public String afficherPageTest() {
         return "demandes/test";
     }
