@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.example.demo.services.DemandeService;
 import java.util.List;
 import java.util.ArrayList;
@@ -41,9 +43,10 @@ public class DemandeController {
     }
 
     @PostMapping("/getById")
-    public String afficherDemande(Model model ,Long id) {
+    public String afficherDemande(Model model ,@RequestParam("demande") Long id) {
         Demande demande = demandeService.getDemandeById(id);
         model.addAttribute("demande",demande);
+        model.addAttribute("listedemande",demandeService.getAllDemande());
         return "demandes/test";
     }
 
