@@ -11,7 +11,6 @@ import com.example.demo.models.Statut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
-import java.util.ArrayList;
 
 @Service
 public class DemandeService {

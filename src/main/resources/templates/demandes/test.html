@@ -1,8 +1,13 @@
 <h2>Formulaire d'ajout de devis : </h2>
 
 <label for="demande"> Choisir votre demande </label><br>
-<select name="demande">
-    <option value="shee">shee</option>
-    <option value="shee">shee</option>
+<select for="demande" name="demande">
+    <option th:each = "ld : ${listedemande}"
+            th:value="${ld.id}"
+            th:text="${ld.lieu}">
+            ahh
+    </option>
 </select><br>
-<button>Ceci est un bouton :D</button>
+<button type="submit">Ceci est un bouton :D</button>
+
+
