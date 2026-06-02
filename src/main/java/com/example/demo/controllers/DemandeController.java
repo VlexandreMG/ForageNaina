@@ -31,7 +31,7 @@ public class DemandeController {
         listeDemande = demandeService.getAllDemande();
 
         model.addAttribute("listedemande", listeDemande);
-        return "demande/test";
+        return "demandes/test";
     }
 
     @PostMapping("/save")
