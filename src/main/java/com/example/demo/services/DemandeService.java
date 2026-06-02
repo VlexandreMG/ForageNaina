@@ -11,6 +11,7 @@ import com.example.demo.models.Statut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class DemandeService {
@@ -44,5 +45,11 @@ public class DemandeService {
     @Transactional
     public List<Demande> getAllDemande() {
         return demandeRepository.findAll();
+    }
+
+    @Transactional
+    public Demande getDemandeById(Long id) {
+        return demandeRepository.findById(id)
+        .orElseThrow(() -> new NoSuchElementException("La demande avec "+ id + " n'existe pas ."));
     }
 }

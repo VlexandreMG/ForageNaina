@@ -40,6 +40,8 @@ public class DemandeController {
         return "redirect:/demandes/new";
     }
 
+    @PostMapping("/getById")
+
     @GetMapping("/test")
     public String afficherPageTest() {
         return "demandes/test";
