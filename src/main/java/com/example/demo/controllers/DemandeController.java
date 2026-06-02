@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.services.DemandeService;
+import java.util.List;
+import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/demandes")
@@ -24,8 +26,12 @@ public class DemandeController {
     }
 
     @GetMapping("/all")
-    public String getAll() {
-        
+    public String getAllDemande(Model model) {
+        List<Demande> listeDemande = new ArrayList<>();
+        listeDemande = demandeService.getAllDemande();
+
+        model.addAttribute("listedemande", listeDemande);
+        return "demande/test";
     }
 
     @PostMapping("/save")
