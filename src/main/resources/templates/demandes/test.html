@@ -1,5 +1,6 @@
 <h2>Formulaire d'ajout de devis : </h2>
 
+    <!-- Demande -->
 <label for="demande"> Choisir votre demande </label><br>
 
 <form th:action="@{/demandes/getById}" th:object="${demande}" method="post">
@@ -13,8 +14,9 @@
 <button type="submit">Ceci est un bouton :D</button>
 </form>
 
-
+    <!-- Devis -->
 <label for="devis">Choisir votre type de devis </label><br>
+
 <select for="devis" name="devis" id="devis">
     <option value="dev1">shee</option>
 </select><br>
