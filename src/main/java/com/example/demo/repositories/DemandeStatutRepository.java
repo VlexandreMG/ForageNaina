@@ -7,4 +7,5 @@ import com.example.demo.models.DemandeStatut;
 @Repository
 public interface DemandeStatutRepository extends JpaRepository<DemandeStatut, Long> {
     
+    DemandeStatut findByDemandeId(int idDemande);
 }
