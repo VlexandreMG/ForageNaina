@@ -13,6 +13,18 @@
 <button type="submit">Ceci est un bouton :D</button>
 </form>
 
-<p th:text="${demande.lieu}" > hyhy  </p>
+
+<label for="devis">Choisir votre type de devis </label><br>
+<select for="devis" name="devis" id="devis">
+    <option value="dev1">shee</option>
+</select><br>
+
+<h3>Détails de la demande sélectionnée : </h3>
+<ul>
+    <li th:text="${demande.lieu}"></li>
+    <li th:text="${demande.Client}"></li>
+    <li th:text="${demande.Commune}"></li>
+</ul>
+<!-- <p th:text="${demande.lieu}" > hyhy  </p> -->
 
 
