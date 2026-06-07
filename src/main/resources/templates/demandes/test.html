@@ -22,11 +22,13 @@
 </select><br>
 
 <h3>Détails de la demande sélectionnée : </h3>
+<div th:if="${demande != null}">
 <ul>
     <li th:text="${demande.lieu}"></li>
     <li th:text="${demande.Client}"></li>
     <li th:text="${demande.Commune}"></li>
 </ul>
+</div>
 <!-- <p th:text="${demande.lieu}" > hyhy  </p> -->
 
 
