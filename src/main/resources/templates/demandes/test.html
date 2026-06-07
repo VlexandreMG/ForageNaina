@@ -27,6 +27,9 @@
     <li th:text="${demande.lieu}"></li>
     <li th:text="${demande.Client}"></li>
     <li th:text="${demande.Commune}"></li>
+    <div th:if="${demandestatut != null}">
+        <li th:action="@{/demandestatut/show}" th:text="${demandeStatut.id}"></li>
+    </div>
 </ul>
 </div> 
 

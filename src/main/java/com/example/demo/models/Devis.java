@@ -12,11 +12,11 @@ public class Devis {
     private int id;
 
     @ManyToOne
-    @Column(name="demande_id")
+    @JoinColumn(name="demande_id")
     private Demande demande;
 
     @ManyToOne 
-    @Column(name="devis_type")
+    @JoinColumn(name="devis_type")
     private DevisType devisType;
 
     @Column(name = "date")
@@ -26,7 +26,7 @@ public class Devis {
     private String observation;
 
     public Devis() {}
-    
+
     public int getId() {
         return id;
     }

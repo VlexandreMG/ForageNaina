@@ -12,7 +12,7 @@ public class DevisDetail {
 
     // Plusieurs lignes de détails appartiennent à un seul Devis
     @ManyToOne
-    @JoinColumn(name = "id_devis") // Clé étrangère vers la table devis
+    @JoinColumn(name = "devis_id") // Clé étrangère vers la table devis
     private Devis devis;
 
     @Column(name = "quantite")
