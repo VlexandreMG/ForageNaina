@@ -25,6 +25,8 @@ public class Devis {
     @Column(name = "observation")
     private String observation;
 
+    public Devis() {}
+    
     public int getId() {
         return id;
     }

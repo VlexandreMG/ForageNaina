@@ -12,6 +12,8 @@ public class DevisType {
 
     private String nom; // Contiendra "Standard" ou "Express"
 
+    public DevisType() {};
+
     public int getId() {
         return id;
     }
