@@ -3,7 +3,7 @@
     <!-- Demande -->
 <label for="demande"> Choisir votre demande </label><br>
 
-<form th:action="@{/demandes/getById}" th:object="${demande}" method="post">
+<form th:action="@{/demandes/getById}" method="post">
 <select for="demande" name="demande">
     <option th:each = "ld : ${listedemande}"
             th:value="${ld.id}"

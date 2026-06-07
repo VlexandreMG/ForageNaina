@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import com.example.demo.models.Demande;
 import com.example.demo.models.DemandeStatut;
 import com.example.demo.services.DemandeStatutService;
-import com.example.demo.repositories.DemandeStatutRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,9 +23,6 @@ public class DemandeController {
 
     @Autowired
     private DemandeService demandeService;
-
-    @Autowired 
-    private DemandeStatut demandeStatut;
 
     @Autowired 
     private DemandeStatutService demandeStatutService;
