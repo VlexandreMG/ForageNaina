@@ -13,11 +13,11 @@ public class DemandeStatut {
 
     @ManyToOne
     @JoinColumn(name = "id_demande")
-    private Demande Demande;
+    private Demande demande;
 
     @ManyToOne
     @JoinColumn(name = "id_statut")
-    private Statut Statut;
+    private Statut statut;
 
     @Column(name = "date")
     private Date date;
@@ -33,19 +33,19 @@ public class DemandeStatut {
     }
 
     public Demande getDemande() {
-        return Demande;
+        return demande;
     }
 
     public void setDemande(Demande demande) {
-        Demande = demande;
+        this.demande = demande;
     }
 
     public Statut getStatut() {
-        return Statut;
+        return statut;
     }
 
     public void setStatut(Statut statut) {
-        Statut = statut;
+        this.statut = statut;
     }
 
     public Date getDate() {

@@ -15,7 +15,7 @@ public class Commune {
 
     @ManyToOne
     @JoinColumn(name = "id_district")
-    private District District;
+    private District district;
 
     public Commune() {}
 
@@ -36,11 +36,11 @@ public class Commune {
     }
 
     public District getDistrict() {
-        return District;
+        return district;
     }
 
     public void setDistrict(District District) {
-        this.District = District;
+        this.district = District;
     }
     
     

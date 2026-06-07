@@ -15,7 +15,7 @@ public class District {
 
     @ManyToOne
     @JoinColumn(name= "id_region")
-    private Region Region;
+    private Region region;
 
     public District() {}
 
@@ -36,10 +36,10 @@ public class District {
     }
 
     public Region getRegion() {
-        return Region;
+        return region;
     }
 
     public void setRegion(Region Region) {
-        this.Region = Region;
+        this.region = Region;
     }
 }

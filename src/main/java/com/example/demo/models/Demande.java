@@ -12,11 +12,11 @@ public class Demande {
 
     @ManyToOne
     @JoinColumn(name = "id_client")
-    private Client Client;
+    private Client client;
 
     @ManyToOne
     @JoinColumn(name = "id_commune")
-    private Commune Commune;
+    private Commune commune;
 
     @Column(name = "lieu")
     private String lieu;
@@ -32,19 +32,19 @@ public class Demande {
     }
 
     public Client getClient() {
-        return Client;
+        return client;
     }
 
     public void setClient(Client client) {
-        this.Client = client;
+        this.client = client;
     }
 
     public Commune getCommune() {
-        return Commune;
+        return commune;
     }
 
     public void setCommune(Commune commune) {
-        this.Commune = commune;
+        this.commune = commune;
     }
 
     public String getLieu() {
