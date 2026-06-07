@@ -4,6 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import com.example.demo.models.Demande;
+import com.example.demo.models.DemandeStatut;
+import com.example.demo.services.DemandeStatutService;
+import com.example.demo.repositories.DemandeStatutRepository;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +24,12 @@ public class DemandeController {
 
     @Autowired
     private DemandeService demandeService;
+
+    @Autowired 
+    private DemandeStatut demandeStatut;
+
+    @Autowired 
+    private DemandeStatutService demandeStatutService;
     
     @GetMapping("/new")
     public String afficherFormulaire(Model model) {
@@ -47,6 +57,11 @@ public class DemandeController {
         Demande demande = demandeService.getDemandeById(id);
         model.addAttribute("demande",demande);
         model.addAttribute("listedemande",demandeService.getAllDemande());
+
+        //Demande Statut
+        int idConverti = id.intValue();
+        DemandeStatut demandeStatut = demandeStatutService.getDemandeStatutByIdDemande(idConverti);
+        model.addAttribute("demandestatut",demandeStatut);
         return "demandes/test";
     }
 
