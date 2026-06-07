@@ -47,3 +47,23 @@ CREATE TABLE demande_statut(
     id_statut INT,
     dates DATE
 );
+
+CREATE TABLE devis (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    demande_id INT NOT NULL,
+    type_id INT NOT NUll,
+    date DATETIME NOT NULL,
+    observation TEXT
+);
+
+CREATE TABLE devis_detail (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    devis_id INT NOT NULL,
+    quantite DECIMAL(10,2) NOT NULL,
+    prix_unitaire DECIMAL(10,2) NOT NULL
+);
+
+CREATE TABLE devis_type (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    libelle VARCHAR(100)
+);
